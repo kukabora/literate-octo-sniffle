@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A191A"
+    tools:context=".Fragments.ProfileFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="407dp"
+                    android:layout_height="742dp"
+                    android:src="@drawable/profile_fragment_page"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/iphone_13_pro_max___8" />
+
+                <TextView
+                    android:id="@+id/userNameView"
+                    android:layout_width="85dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="224dp"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profileAgeField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="20"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userNameView" />
+
+                <TextView
+                    android:id="@+id/profileStreakField"
+                    android:layout_width="43dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="348dp"
+                    android:text=" streak"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.155"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/answeredThreadsAmount"
+                    android:layout_width="73dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="58dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginEnd="54dp"
+                    android:text=" friends"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/threadsAmountView"
+                    app:layout_constraintHorizontal_bias="0.722"
+                    app:layout_constraintStart_toEndOf="@+id/profileStreakField"
+                    app:layout_constraintTop_toBottomOf="@+id/profileAgeField" />
+
+                <TextView
+                    android:id="@+id/threadsAmountView"
+                    android:layout_width="52dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="348dp"
+                    android:layout_marginEnd="36dp"
+                    android:text=" threads"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="180dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="37dp"
+                    android:background="#1CA553"
+                    android:fontFamily="@font/lato_light"
+                    android:onClick="startCreatePostActivity"
+                    android:text="Create new post"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:iconTint="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/answeredThreadsAmount"
+                    app:rippleColor="#FFFFFF"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/avatarImage"
+                    android:layout_width="121dp"
+                    android:layout_height="118dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="56dp"
+                    android:clickable="true"
+                    android:onClick="pick"
+                    android:src="@drawable/profile_placeholder_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profilePostsRecycler"
+                    android:layout_width="374dp"
+                    android:layout_height="268dp"
+                    android:layout_marginTop="485dp"
+                    android:background="#2C2A2C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

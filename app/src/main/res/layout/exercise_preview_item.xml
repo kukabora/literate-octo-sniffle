@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainExerciseElementLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/baseCellImage"
+        android:layout_width="134dp"
+        android:layout_height="128dp"
+        app:srcCompat="@drawable/training_element"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/exerciseImage"
+        android:layout_width="79dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/baseCellImage"
+        app:layout_constraintEnd_toEndOf="@+id/baseCellImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="15dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/baseCellImage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/exerciseAmount"
+        android:layout_width="23dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/baseCellImage"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseImage" />
+
+    <TextView
+        android:id="@+id/exerciseEstimatedTime"
+        android:layout_width="19dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/baseCellImage"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseAmount" />
+
+    <TextView
+        android:id="@+id/exerciseHiddenId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/exerciseImage"
+        app:layout_constraintTop_toTopOf="@+id/exerciseImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

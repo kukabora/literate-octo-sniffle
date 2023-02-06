@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A191A"
+    tools:context=".CommentingActivity">
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/lato_light"
+        android:text="Write your comment below"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/commentDownvoteThread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_light"
+        android:text="downvote"
+        android:onClick="commentWithDownvote"
+        android:textColor="#E83636"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/commentUpvoteThread"
+        app:layout_constraintTop_toBottomOf="@+id/commentSectionEditText" />
+
+    <Button
+        android:id="@+id/commentUpvoteThread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="commentWithUpvote"
+        android:fontFamily="@font/lato_light"
+        android:text="upvote"
+        android:textColor="#1CA553"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/commentDownvoteThread"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentSectionEditText" />
+
+    <EditText
+        android:id="@+id/commentSectionEditText"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="#232323"
+        android:ems="10"
+        android:fontFamily="@font/lato_light"
+        android:hint="Enter your comment text...."
+        android:inputType="textPersonName"
+        android:minHeight="5dp"
+        android:onClick="commentWithDownvote"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A5A5A5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21"
+        tools:ignore="TouchTargetSizeCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

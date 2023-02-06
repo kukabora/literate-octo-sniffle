@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#2C2A2C">
+
+    <ImageView
+        android:id="@+id/baseProfilePostBack"
+        android:layout_width="364dp"
+        android:layout_height="363dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/post_base_image" />
+
+    <TextView
+        android:id="@+id/likesAmount"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_light"
+        android:text="likesAmount"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/baseProfilePostBack"
+        app:layout_constraintTop_toBottomOf="@+id/postImage" />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="341dp"
+        android:layout_height="257dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="@+id/baseProfilePostBack"
+        app:layout_constraintTop_toTopOf="@+id/baseProfilePostBack"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/postCreationDate"
+        android:layout_width="113dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_light"
+        android:text="postCreationDate"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/baseProfilePostBack"
+        app:layout_constraintTop_toTopOf="@+id/baseProfilePostBack" />
+
+    <TextView
+        android:id="@+id/postDescription"
+        android:layout_width="340dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="156dp"
+        android:background="#D9252525"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/postImage"
+        app:layout_constraintTop_toTopOf="@+id/postImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

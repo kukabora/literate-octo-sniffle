@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="734dp"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/authentication" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="206dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="24dp"
+        android:background="#1CA553"
+        android:fontFamily="@font/lato_light"
+        android:text="Sign in"
+        android:onClick="login"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="132dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        android:fontFamily="@font/lato_light"
+        android:onClick="guestSignIn"
+        android:text=" No, thanks. Continue as a guest."
+        android:textAlignment="center"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="210dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1CA553"
+        android:fontFamily="@font/lato_light"
+        android:text="Create new account"
+        android:onClick="register"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

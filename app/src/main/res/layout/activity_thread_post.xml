@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A191A"
+    tools:context=".ThreadPostActivity">
+
+    <ImageView
+        android:id="@+id/ownerAvatar"
+        android:layout_width="93dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/ownerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/ownerAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/postDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/lato_light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/ownerAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/ownerName" />
+
+    <TextView
+        android:id="@+id/postThesis"
+        android:layout_width="257dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/lato_light"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/ownerAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/postDate" />
+
+    <TextView
+        android:id="@+id/upvotesText"
+        android:layout_width="55dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/lato_light"
+        android:text="upvotes"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downvotesText"
+        android:layout_width="71dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/lato_light"
+        android:text="downvotes"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upvotesText" />
+
+    <TextView
+        android:id="@+id/upvotesAmount"
+        android:layout_width="21dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/lato_light"
+        android:text="3"
+        android:textColor="#1CA553"
+        app:layout_constraintEnd_toStartOf="@+id/upvotesText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downvotesAmount"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/lato_light"
+        android:text="3"
+        android:textColor="#E83636"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/downvotesText"
+        app:layout_constraintTop_toBottomOf="@+id/upvotesAmount" />
+
+    <Button
+        android:id="@+id/commentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="COMMENT ON POST"
+        android:onClick="startCreateCommentActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionView" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentBtn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRecycler"
+        android:layout_width="397dp"
+        android:layout_height="531dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/descriptionView"
+        android:layout_width="238dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_light"
+        android:text="TextView"
+        android:textColor="#D8D8D8"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postThesis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
